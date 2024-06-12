@@ -13,7 +13,7 @@ import java.util.Optional;
 
 @Service
 public class UserServiceImp implements UserService {
-    private static final Logger logger = LoggerFactory.getLogger(UserController.class);
+    private static final Logger logger = LoggerFactory.getLogger(UserServiceImp.class);
 
     @Autowired
     UserRepository userRepo;
