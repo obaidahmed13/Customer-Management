@@ -24,6 +24,11 @@ public class UserServiceImp implements UserService {
         return this.userRepo.save(user);
     }
 
+    public List<User> createUsers(List<User> users) {
+        return this.userRepo.saveAll(users);
+    }
+
+
     @Override
     public List<User> getAllUsers() {
         logger.debug("Getting all users");

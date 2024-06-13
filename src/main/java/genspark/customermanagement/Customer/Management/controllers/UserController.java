@@ -73,6 +73,20 @@ public class UserController {
         }
     }
 
+    @PostMapping("/user/createUsers")
+    public List<User> addMultipleUsers(@RequestBody List<User> users) {
+        logger.trace("Method addMultipleUsers: ");
+        logger.debug("Adding multiple users: {}", users);
+        try {
+            List<User> createdUsers = this.userServ.createUsers(users);
+            logger.info("Success in adding multiple users.");
+            return createdUsers;
+        } catch (Exception e) {
+            logger.error("Error in adding multiple users.", e);
+            throw e;
+        }
+    }
+
     @DeleteMapping("/user/delete/{id}")
     public String deleteUser(@PathVariable Long id) {
         logger.trace("Method deleteUser: ");

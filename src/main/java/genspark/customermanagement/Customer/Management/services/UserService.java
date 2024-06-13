@@ -15,6 +15,6 @@ public interface UserService {
     List<User> findByName(String name);
     List<User> findByPhoneNumber(String phoneNumber);
     List<User> findByEmail(String email);
-
+    List<User> createUsers(List<User> users);
 
 }
